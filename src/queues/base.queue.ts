@@ -16,6 +16,7 @@ export default class BaseQueue {
 
         this.queue.on('failed', this.failed);
         this.queue.on('completed', this.completed);
+        console.log(process.env);
         this.queue.on('error', (error) => {
             console.error(`Falha nas tasks, verifique suas configs:  ${error} `)
         });
