@@ -1,6 +1,14 @@
-import LogQueue from "./log.queue";
-const queues = {
-    log: LogQueue.getInstance().queue,
-}
+import CandidateQueue from './candidate.queue';
+import LogQueue from './console.queue';
+import EmailQueue from './email.queue';
+import VoteQueue from './vote.queue';
 
-export default queues;
+const queues = {
+    candidate: CandidateQueue.getInstance().queue,
+    log: LogQueue.getInstance().queue,
+    email: EmailQueue.getInstance().queue,
+    vote: VoteQueue.getInstance().queue,
+  };
+  
+  export default queues;
+  
